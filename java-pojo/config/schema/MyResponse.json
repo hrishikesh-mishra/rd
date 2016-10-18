@@ -1,0 +1,129 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "r_id": {
+      "type": "string"
+    },
+    "c_id": {
+      "type": "string"
+    },
+    "s_r_type": {
+      "type": "string"
+    },
+    "start_time": {
+      "type": "string"
+    },
+    "end_time": {
+      "type": "string"
+    },
+    "constraint_code": {
+      "type": "string"
+    },
+    "constraint_type": {
+      "type": "string"
+    },
+    "request_data": {
+      "type": "object",
+      "properties": {
+        "m_id": {
+          "type": "string"
+        },
+        "breach_cost": {
+          "type": "string"
+        },
+        "dispatch_after_date": {
+          "type": "string"
+        },
+        "dispatch_by_date": {
+          "type": "string"
+        },
+        "gift_wrap": {
+          "type": "boolean"
+        },
+        "gift_message": {
+          "type": "string"
+        },
+        "sales_channel": {
+          "type": "string"
+        },
+        "return_warehouse_id": {
+          "type": "string"
+        },
+        "tracking_id": {
+          "type": "string"
+        },
+        "courier_name": {
+          "type": "string"
+        },
+        "destination_pincode": {
+          "type": "string"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "reservation_request_id": {
+                "type": "string"
+              },
+              "product": {
+                "type": "object",
+                "properties": {
+                  "fsn": {
+                    "type": "string"
+                  },
+                  "sku": {
+                    "type": "string"
+                  },
+                  "owner_id": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "fsn",
+                  "sku",
+                  "owner_id"
+                ]
+              },
+              "quantity": {
+                "type": "integer"
+              },
+              "is_replacement": {
+                "type": "boolean"
+              },
+              "replacement_reason": {
+                "type": "string"
+              },
+              "replacement_sub_reason": {
+                "type": "string"
+              }
+            },
+            "required": []
+          }
+        },
+        "in_url": {
+          "type": "string"
+        },
+        "inv_name": {
+          "type": "string"
+        },
+        "inv_data": {
+          "type": "object",
+          "properties": {}
+        },
+        "sh_url": {
+          "type": "string"
+        },
+        "sh_name": {
+          "type": "string"
+        }
+      },
+      "required": []
+    }
+  },
+  "required": [
+    "r_id",
+    "c_id"
+  ]
+}

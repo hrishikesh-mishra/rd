@@ -1,0 +1,1 @@
+# Generate POJO from schema
